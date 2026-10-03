@@ -19,7 +19,7 @@ loginForm.addEventListener("submit", function(event) {
         return;
     }
     if (email === correctEmail && password === correctPassword) {
-        window.location.href = "landingpage.html";
+        window.location.href = "index.html";
     }else{
         attempts++;
         const remaining = maxAttempts - attempts;
