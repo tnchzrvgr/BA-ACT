@@ -1,0 +1,368 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar .container {
+    padding-top: 15px;
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.navbar-nav i {
+    color: white;
+    font-size: 18px;
+}
+
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.hero-section {
+    min-height: 100vh;
+    background:
+        linear-gradient(180deg,
+            rgba(0, 0, 0, 0.4) 0%,
+            rgba(15, 23, 42, 0.85) 100%),
+        url('assets/Gemini_Generated_Image_m19hs5m19hs5m19h.jpg') center / cover no-repeat;
+    display: flex;
+    align-items: center;
+    padding: 120px 0 70px;
+}
+
+.japan-title {
+    font-size: clamp(4rem, 12vw, 11.25rem);
+    line-height: 0.9;
+    margin: 0 0 30px;
+}
+
+.hero-text {
+    width: min(70%, 900px);
+    margin: 0 auto;
+    font-size: clamp(0.9rem, 1.3vw, 1.05rem);
+    font-weight: 300;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+.hero-text p {
+    margin-bottom: 20px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.button-container a {
+    display: inline-block;
+    padding: 17px 40px;
+    border-radius: 50px;
+    background-color: white;
+    color: #000000;
+    text-decoration: none;
+    text-transform: uppercase;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    letter-spacing: 1.5px;
+    font-size: 12px;
+    transition: all 0.4s ease;
+}
+
+.button-container a:hover {
+    letter-spacing: 3px;
+    background-color: hsl(261, 80%, 48%);
+    color: white;
+    box-shadow: rgb(93 24 220) 0 7px 29px 0;
+}
+
+.button-container a:active {
+    transform: translateY(5px);
+}
+
+.second-section {
+    min-height: 100vh;
+
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.4),
+            rgba(15, 23, 42, 0.75)),
+        url('assets/b2c27b82-bcc7-4f1e-8787-961631bb825f.jpg') center / cover no-repeat;
+    display: flex;
+    align-items: center;
+    padding: 100px 0;
+}
+
+.second-section .container {
+    width: 100%;
+}
+
+.tagline {
+    margin: 0 0 15px;
+    font-weight: 300;
+    font-size: clamp(0.75rem, 1.5vw, 1rem);
+    letter-spacing: 3px;
+}
+
+.second-section h1 {
+    font-size: clamp(2.5rem, 6vw, 5.5rem);
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.home-text {
+    width: min(70%, 900px);
+    margin: 0;
+    font-weight: 300;
+    font-size: clamp(0.9rem, 1.3vw, 1.05rem);
+    line-height: 1.8;
+}
+
+.button1 {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 20px;
+    margin-top: 35px;
+    background-color: #f4f5f5;
+    color: #111;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 12px;
+    transition: 0.3s;
+}
+
+.button1:hover {
+    background-color: #111;
+    color: white;
+}
+
+.third-section {
+    min-height: 100vh;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.4),
+            rgba(15, 23, 42, 0.75)),
+        url('assets/ea71e3bf-e356-4261-832c-9e44c23a86b8.jpg') center / cover no-repeat;
+    display: flex;
+    align-items: center;
+
+    padding: 100px 0;
+}
+
+.about-header {
+    max-width: 800px;
+    margin-bottom: 25px;
+    font-size: clamp(2.5rem, 6vw, 5.5rem);
+    line-height: 1.1;
+}
+
+.about-text {
+    width: min(60%, 800px);
+    margin-bottom: 20px;
+    font-weight: 300;
+    font-size: clamp(0.9rem, 1.3vw, 1.05rem);
+    line-height: 1.8;
+}
+
+
+.button2 {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 20px;
+    margin-top: 15px;
+    background-color: #f4f5f5;
+    color: #111;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 12px;
+    transition: 0.3s;
+}
+
+.button2:hover {
+    background-color: #111;
+    color: white;
+}
+
+@media (max-width: 991px) {
+
+    .navbar .container {
+        padding-top: 10px;
+    }
+
+    .navbar-collapse {
+        margin-top: 15px;
+        padding: 15px;
+        background: rgba(0, 0, 0, 0.75);
+        border-radius: 10px;
+        backdrop-filter: blur(10px);
+    }
+
+    .navbar-nav {
+        align-items: flex-start;
+        gap: 5px !important;
+    }
+
+    .navbar-nav .nav-item {
+        width: 100%;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 10px 5px;
+    }
+
+    .navbar-nav i {
+        display: block;
+        padding: 10px 5px;
+    }
+
+    .hero-section {
+        padding: 120px 0 70px;
+    }
+
+    .japan-title {
+        font-size: clamp(4rem, 15vw, 8rem);
+    }
+
+    .hero-text {
+        width: 85%;
+        text-align: left;
+    }
+
+    .home-text {
+        width: 85%;
+    }
+
+    .about-text {
+        width: 85%;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .navbar .container {
+        padding: 10px 15px 0;
+    }
+
+    .navbar-brand {
+        font-size: 1.25rem !important;
+    }
+
+    .navbar-collapse {
+        margin-top: 10px;
+    }
+
+    .hero-section {
+        min-height: 100svh;
+
+        padding: 120px 0 60px;
+    }
+
+    .japan-title {
+        font-size: clamp(3.5rem, 20vw, 6rem);
+        margin-bottom: 25px;
+    }
+
+    .hero-text {
+        width: 100%;
+        padding: 0 15px;
+        font-size: 0.95rem;
+        line-height: 1.7;
+        text-align: left;
+    }
+
+    .hero-text p {
+        margin-bottom: 15px;
+    }
+
+    .button-container {
+        margin-top: 25px;
+    }
+
+    .button-container a {
+        padding: 14px 28px;
+        font-size: 11px;
+    }
+
+
+    .second-section {
+        min-height: 100svh;
+        padding: 90px 0 60px;
+    }
+
+    .tagline {
+        font-size: 0.7rem;
+        letter-spacing: 2px;
+        margin-bottom: 15px;
+        margin-left: 15px;
+    }
+
+    .second-section h1 {
+        font-size: clamp(2.5rem, 12vw, 4rem);
+        line-height: 1.05;
+        margin-left: 15px;
+    }
+
+    .home-text {
+        width: 100%;
+        padding: 0 15px;
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+
+    .button1 {
+        margin-top: 25px;
+        padding: 11px 18px;
+        margin-left: 15px;
+    }
+
+    .third-section {
+        min-height: 100svh;
+        padding: 90px 0 60px;
+    }
+
+    .about-header {
+        font-size: clamp(2.5rem, 12vw, 4rem);
+        line-height: 1.05;
+        margin-bottom: 20px;
+        margin-left: 15px;
+    }
+
+    .about-text {
+        width: 100%;
+        padding: 0 15px;
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+
+    .button2 {
+        margin-top: 10px;
+        padding: 11px 18px;
+        margin-left: 15px;
+    }
+}

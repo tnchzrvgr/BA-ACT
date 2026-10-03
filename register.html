@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="registe.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.22.1/jquery.validate.min.js"
+        integrity="sha512-qu7dMuIm2f0KcKZ3BOoP4c+Hn+r4E8PbD2Ro4rmKsOyheCxcwhzQpf6SojA76dn+owqfANzfTFUTkGA+HpHjOA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <form id="registerForm">
+            <h2>REGISTER</h2>
+            <input type="text" placeholder="Username" name="Username">
+            <input type="text" placeholder="Email" name="Email">
+            <input type="text" placeholder="Phone Number" name="Phone">
+            <input type="password" placeholder="Password" id="Password"name="Password">
+            <input type="password" placeholder="Confirm Password" id="ConfirmPassword" name="ConfirmPassword">
+            <button><span>Register</span></button>
+            <p>Already have an account? <a href="login.html">Login Here</a></p>
+        </form>
+    </div>
+</body>
+
+<script>
+        $(document).ready(function () {
+
+            $("#registerForm").validate({
+                rules: {
+                    Username: {
+                        required: true,
+                        minlength: 5,
+                        maxlength: 10
+                    },
+                    Email: {
+                        required: true,
+                        email: true
+                    },
+                    Phone: {
+                        required: true,
+                        minlength: 11,
+                        maxlength: 11
+                    },
+                    Password: {
+                        required: true,
+                        minlength: 11
+                    },
+                    ConfirmPassword: {
+                        required: true,
+                        equalTo: "#Password"
+                    }
+                }, 
+
+                messages: {
+                    Username: {
+                        required: "Please enter your name",
+                        minlength: "Name must be at least 5 characters long",
+                        maxlength: "Name cannot exceed 10 characters"
+                    },
+                    Email: {
+                        required: "Please enter your email",
+                        email: "Please enter a valid email address"
+                    },
+                    Phone: {
+                        required: "Please enter your phone number",
+                        minlength: "Phone number must be 11 digits long",
+                        maxlength: "Phone number must be 11 digits long"
+                    },
+                    Password: {
+                        required: "Please provide a password",
+                        minlength: "Password must be at least 11 characters long"
+                    },
+                    ConfirmPassword: {
+                        required: "Please confirm your password",
+                        equalTo: "Passwords do not match"
+                    }
+                },
+            });
+        });
+    </script>
+
+</html>
